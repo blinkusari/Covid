@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>COVID-19 Statistikat për Kosovë</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="covid19-icon.png">
+    <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Font Awesome  -->
+    <script src="https://kit.fontawesome.com/a4ecf9e646.js" crossorigin="anonymous"></script>
+    <!-- Ajax Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light" style="padding: 0 5% 0 5%; background-color: white;">
+            <a class="navbar-brand" href="#"><img src="covid19-logo.png" style="height: 60px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Statistikat
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#grupmoshave">Sipas Grupmoshave</a>
+                      <a class="dropdown-item" href="#gjinis">Sipas Gjinisë</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#amundtedal">A mund të dal?</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#kosov">Harta e Kosovës</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#bota">Bota</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body" style="margin: auto; width: 93%; margin-top: 5%;">
+
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-1">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Të infektuar</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white teInfektuar"> </h2>
+                                    <p class="text-white mb-0" style="font-size: smaller;">Të dhënat e fundit: <br></p>
+                                    <p class="text-white mb-0 update" style="font-size: smaller;"></p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fas fa-hospital-user"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-2">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Viktima</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white teVdekur"> </h2>
+                                    <p class="text-white mb-0" style="font-size: smaller;">Të dhënat e fundit: <br></p>
+                                    <p class="text-white mb-0 update" style="font-size: smaller;"></p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fas fa-procedures"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-3">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Të shëruar</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white teSheruar"> </h2>
+                                    <p class="text-white mb-0" style="font-size: smaller;">Të dhënat e fundit: <br></p>
+                                    <p class="text-white mb-0 update" style="font-size: smaller;"></p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fas fa-hand-holding-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card gradient-4">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">Vdekshmëria</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white perqindja"> </h2>
+                                    <p class="text-white mb-0" style="font-size: smaller;">Të dhënat e fundit: <br></p>
+                                    <p class="text-white mb-0 update" style="font-size: smaller;"></p>
+                                </div>
+                                <span class="float-right display-5 opacity-5"><i class="fas fa-percent"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body pb-0 d-flex justify-content-between">
+                                        <div>
+                                            <h4 class="mb-1">Të dhënat në bazë kohore</h4>
+                                            <p>Rastet nga data 24 Mars 2020</p>
+                                        </div>
+                                     </div>
+                                    <div class="chart-wrapper" style="margin: auto; width: 91%;">
+                                        <canvas id="chart_widget_2"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="row">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="card" id="grupmoshave">
+                                <div class="card-body">
+                                    <h4 class="card-title">Numri i të infektuarëve në bazë të grupmoshave</h4>
+                                    <canvas id="singelBarChart" ></canvas>
+                                </div>
+                            </div>
+                            
+                        </div>    
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card card-widget" id="gjinis">
+                                <div class="card-body">
+                                    <h4 class="card-title">Ndarja e të infektuarëve në bazë të gjinisë</h4>
+                                    <canvas id="doughutChart"></canvas>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <span class="display-5 opacity-4" style="color: #75d69c;">
+                                        <i class="fas fa-house-user"></i>
+                                    </span>
+                                    <h5 class="mt-3 mb-1">Karantinë</h5>
+                                    <p class="m-0">Qytet të cilat kanë hyrë në Karantinë deri më tash, janë: 
+                                        <b>Prishtina, Prizreni, Klina, Vitia, Malisheva, Fshati Janjevë në Lipjan, Fshati Dumnicë në Podujevë, 
+                                            Fshati Bibaj në Ferizaj dhe Fshati Korishe ne Prizren.</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <span class="display-5 opacity-4" style="color: #75d69c;">
+                                        <i class="fas fa-phone"></i>
+                                    </span>
+                                    <h5 class="mt-3 mb-1">Lajmërohuni</h5>
+                                    <p class="m-0">Lajmërohuni në numrin <a href="tel:03820080800"><b>038 200 80 800</b></a> në qoftë se keni ndonjë nga simptomat e lartpërmendura.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <span class="display-5 opacity-4" style="color: #75d69c;">
+                                        <i class="fas fa-people-arrows"></i>
+                                    </span>
+                                    <h5 class="mt-3 mb-1">Masat për Parandalim</h5>
+                                    <p class="m-0">1.Pastroni rregullisht dhe tërësisht duart tuaja me një larës të bazuar në alkool ose lani ato me sapun dhe ujë.
+                                        <br>2.Mbani së paku 1 metër distancë ndërmjet jush dhe personat që kolliten apo teshtijnë.
+                                        <br>3.Shmangni prekjen e hundës, syve dhe gojës.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6"  id="amundtedal">
+
+                        <div class="card">
+                            <div class="chart-wrapper mb-4">
+                                <div class="px-4 pt-4 d-flex justify-content-between">
+                                    <div>
+                                        <h4>A mund të dalë?</h4>
+                                        <p>E dim që krejt kjo eshte shume e komplikuar, po tpakten mundeni me gjete kohen tuaj ma lehte ktu! </p>
+                                    </div>
+                                </div>
+                                <div style="display: block; text-align: center; padding: 20px;">
+                                    <input class="shkruje" id="search" type="text" placeholder="Shënoni numrin tuaj" name="search2">
+                                    <button type="submit" onclick="search()" class="kshyre"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-body border-top pt-4">
+                                <div class="row">
+                                    <div class="col-sm-12" style="text-align: center;">
+                                        <h5 class="m-0">Sot ju mund të dilni gjatë:</h5>
+                                        <br>
+                                        <h3 id="kohajuaj" class="m-0"> </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-sm-6 col-xxl-6">
+                        <div class="card" id="kosov">
+                            <div style="justify-content: center; padding: 20px;">
+                                <iframe title="Shp&euml;rndarja e Rasteve sipas Distrikteve" aria-label="Kosovo districts choropleth map" id="datawrapper-chart-fD7Lb" src="//datawrapper.dwcdn.net/fD7Lb/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}})}();
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-12 col-sm-12 col-xxl-12">
+                        <div class="card" id="bota">
+                            <div class="card-body">
+                                    <h4 class="card-title mb-0">Visualizimi i rasteve të konfirmuara dhe vdekjeve në Botë</h4>
+                                <!-- <div id="world-map" style="height: 1px;"></div> -->
+                                <div class="flourish-embed flourish-map" data-src="story/229998"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+                            </div>        
+                        </div>
+                    </div>
+                </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href=">Blin Kusari</a> for <a href="https://opendatakosovo.org/">ODK (Open Data Kosovo)</a> </p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script> 
+    <script src="js/custom.min.js"></script>
+
+    <!-- Chartjs -->
+    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="./plugins/raphael/raphael.min.js"></script>
+    <script src="./plugins/morris/morris.min.js"></script>
+
+
+
+    <script src="./js/dashboard/dashboard-1.js"></script>
+
+</body>
+
+</html>
